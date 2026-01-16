@@ -1,4 +1,4 @@
-# ezyZip - Job Application Tracker
+# Job Application Tracker
 
 A modern, full-stack job application tracking system that helps you organize and manage your job search. Track applications across different stages, visualize your progress with a Kanban board, and never lose track of where you applied.
 
@@ -62,21 +62,21 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/ezyZip.git
-cd ezyZip
+git clone https://github.com/miqdadv/Job-Tracker
+cd Job-Tracker
 ```
 
 ### 2. Backend Setup
 
 ```bash
-cd ezy/Backend
+cd Job-Tracker/Backend
 npm install
 ```
 
 Create a `.env` file in the Backend directory:
 
 ```env
-MONGO_URI=mongodb+srv://your-username:your-password@cluster0.mongodb.net/ezyzip
+MONGO_URI=mongodb+srv://your-username:your-password@cluster0.mongodb.net/Job-Tracker
 JWT_SECRET=your-super-secret-jwt-key
 PORT=5001
 ```
@@ -94,7 +94,7 @@ The API will be running at `http://localhost:5001`
 Open a new terminal:
 
 ```bash
-cd ezy/Frontend
+cd Job-Tracker/Frontend
 npm install
 ```
 
@@ -172,27 +172,25 @@ GET /api/tracker?status=Interview&search=Google&page=1&limit=10
 ## Project Structure
 
 ```
-ezyZip/
-├── ezy/
-│   ├── Backend/
-│   │   ├── controllers/      # Request handlers
-│   │   ├── models/           # MongoDB schemas
-│   │   ├── routes/           # API routes
-│   │   ├── middleware/       # Auth middleware
-│   │   ├── utils/            # Database connection
-│   │   └── index.js          # Express app
-│   │
-│   └── Frontend/
-│       ├── src/
-│       │   ├── components/   # React components
-│       │   │   ├── tracker/  # Tracker-specific components
-│       │   │   ├── ui/       # Reusable UI components
-│       │   │   └── ...
-│       │   ├── redux/        # State management
-│       │   ├── hooks/        # Custom hooks
-│       │   └── App.jsx       # Main app
-│       └── ...
-│
+Job-Tracker/
+   ├── Backend/
+   │   ├── controllers/      # Request handlers
+   │   ├── models/           # MongoDB schemas
+   │   ├── routes/           # API routes
+   │   ├── middleware/       # Auth middleware
+   │   ├── utils/            # Database connection
+   │   └── index.js          # Express app
+   │
+   └── Frontend/
+      ├── src/
+      │   ├── components/   # React components
+      │   │   ├── tracker/  # Tracker-specific components
+      │   │   ├── ui/       # Reusable UI components
+      │   │   └── ...
+      │   ├── redux/        # State management
+      │   ├── hooks/        # Custom hooks
+      │   └── App.jsx       # Main app
+      └── ...
 ├── screenshots/              # App screenshots
 └── README.md
 ```
